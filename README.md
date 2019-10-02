@@ -1,7 +1,7 @@
 # bucket2bq
 A script that loads a detailed GCS bucket listing into BigQuery, so you can analyze object metadata.
 
-Usage: `./bucket2bq.sh bucket_name metadata_obj dataset_table [temp_dataset_table]`
+```Usage: ./bucket2bq.sh bucket_name metadata_obj dataset_table [temp_dataset_table]
 
 Loads a record of metadata for all objects in the given bucket. The metadata fields recorded are:
 
@@ -19,3 +19,4 @@ Arguments:
   metadata_obj            The name of an object in which to stream LDJSON metadata. This object can be deleted when the job is done. Example: gs://mybucket/metadata.json
   dataset_table           The name of the dataset and table in which to store the metadata in BigQuery, separated by a dot. Example: mydataset.mytable
   temp_dataset_table      (optional) The name of a temporary dataset and table in which to temporarily store the metadata in BigQuery, separated by a dot. A temporary table is used for timestamp parsing. Example: mydataset.mytable_temp
+```
